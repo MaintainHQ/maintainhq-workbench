@@ -1,98 +1,78 @@
 # MaintainHQ Workbench
 
-## Dependencies
+A modern, multi-project desktop dashboard for managing Node/React apps and databases—no terminal required.
 
-Before you start, make sure you have the following installed globally:
-- [Node.js](https://nodejs.org/) (v16+ recommended)
-- [npm](https://www.npmjs.com/)
+---
 
-You will also need to install project dependencies:
+## ✨ Features
 
-```sh
-npm install
-npm install --save-dev webpack webpack-cli @babel/core @babel/preset-env @babel/preset-react babel-loader
-npm install react react-dom express
-```
+- **Multi-app/project control:** Start, stop, and restart multiple Node/React projects from one place
+- **Sidebar navigation:** Clean, branded UI with your logo and colors
+- **Port customisation:** Change dev server ports from the UI
+- **Database management:** Check/install PostgreSQL/MySQL (Homebrew/Docker), open Bytebase for DB admin
+- **Onboarding guide:** Interactive walkthrough for first-time users
+- **App icon:** MaintainHQ circles icon for desktop and taskbar
+- **No gradients, no clutter:** Minimal, foolproof experience
 
-## First-time Setup
+---
+
+## 🖥️ Installation & Setup
 
 1. **Install dependencies:**
    ```sh
    npm install
    npm install --save-dev webpack webpack-cli @babel/core @babel/preset-env @babel/preset-react babel-loader
-   npm install react react-dom express
+   npm install react react-dom express electron
    ```
 2. **Build the client:**
    ```sh
    npm run build:client
    ```
-3. **Start the dashboard server:**
+3. **Start the Electron app:**
    ```sh
-   npm run start:web
+   npm run electron
    ```
-4. **Open your browser:**
-   Go to http://localhost:5050
+   The dashboard will open as a desktop app. If not, run `npm run electron` again or check for errors in your terminal.
 
 ---
 
-A web-based task manager for Procfile-based or npm-based applications, with additional features for database management and developer workflow automation.
+## 🧭 Using MaintainHQ Workbench
 
-## 🚀 Installation
+- **Sidebar:** Navigate between Dashboard, Projects, Settings, and Help
+- **Add/manage projects:** Use the Projects section to add folders and control multiple apps
+- **Port customisation:** Change the port for any app in Settings
+- **Database tools:** Check/install DBs and open Bytebase from the Database section
+- **Onboarding:** The app will guide you through setup on first launch
 
-```
-$ npm install -g maintainhq-workbench
-```
+---
 
-## 📄 Usage
+## 🖼️ Screenshots
 
-To start MaintainHQ Workbench you can use `mhq [command] [options]` (or longer alias `maintainhq-workbench [command] [options]`).
+> _Replace these with real screenshots before release_
 
-Application provides two commands: `mhq start` and `mhq web` (read below).
+![Dashboard Screenshot](assets/placeholder-dashboard.png)
+![Project Control Screenshot](assets/placeholder-projects.png)
 
-Need help? Use command:
+---
 
-```
-$ mhq --help
-# or simply
-$ mhq
-```
+## 🛠️ Troubleshooting
 
-## 💻 Console version (`mhq start`)
+- **App won’t start?**
+  - Make sure you’ve run all install/build steps
+  - Check for errors in your terminal
+- **Port in use?**
+  - Change the port in Settings or close the conflicting app
+- **Missing features?**
+  - Some features (DB install, Bytebase integration) may require Homebrew or Docker installed on your system
 
-```
-$ mhq start [options]
-```
+---
 
-Run tasks from `Procfile` or `package.json`
+## 📝 License
 
-Options:
+MIT License
 
-* `-p, --package` - using package.json for managing tasks.
-* `-t, --tasks [tasks]` - list of tasks to run asynchronously (example: `mhq start --tasks start,start:dev,start-server`)
+---
 
-## 💻 Web version (`mhq web`)
+## About
 
-```
-$ mhq web [options]
-```
-
-Launch the web application task manager. Reads `Procfile` and `package.json` and allows launching scripts from these files together.
-
-Options:
-
-* `-t, --tasks [tasks]` - list of tasks to manage in the web application
-* `-p, --port <PORT>` - sets the server port, default `5050`
-* `-n, --name <NAME>` - sets the project name. Defaults to the name in `package.json` or 'MaintainHQ Workbench'
-
-## Features
-
-- Start/stop/restart npm/Procfile scripts from a web UI
-- Minimal, clean interface (no gradients)
-- Database management (PostgreSQL/MySQL) coming soon
-- One-click DB install (Homebrew/Docker)
-- Open Bytebase for DB admin (new tab)
-- Port customisation for dev server
-
-## License
-
-MIT License 
+MaintainHQ Workbench is designed for developers who want a clean, foolproof way to manage multiple Node/React projects and databases—without touching the terminal. Built with Electron, React, and Express. 

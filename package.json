@@ -4,17 +4,20 @@
   "author": "MaintainHQ",
   "scripts": {
     "build:client": "webpack --config webpack.config.js",
-    "start:web": "node server/server.js"
+    "electron": "electron ."
   },
+  "main": "main.js",
   "bin": {
     "mhq": "./flamebird.js",
     "maintainhq-workbench": "./flamebird.js"
   },
   "devDependencies": {
     "@babel/core": "^7.28.0",
+    "@babel/plugin-transform-runtime": "^7.28.0",
     "@babel/preset-env": "^7.28.0",
     "@babel/preset-react": "^7.27.1",
     "babel-loader": "^10.0.0",
+    "electron": "^30.5.1",
     "webpack": "^5.99.9",
     "webpack-cli": "^6.0.1"
   },
